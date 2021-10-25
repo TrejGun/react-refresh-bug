@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "@gemunion/eslint-config/presets/tsx"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.test.json"
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/test/**/*.{js,jsx,ts,tsx}",
+          "**/*.test.{js,jsx,ts,tsx}",
+          "**/*.spec.{js,jsx,ts,tsx}",
+          "**/webpack.config.{js,ts}",
+          "**/webpack.development.{js,ts}",
+          "**/webpack.production.{js,ts}"
+        ]
+      }
+    ]
+  },
+  "root": true
+}
